@@ -1,5 +1,5 @@
 /* Source Check service worker: works offline, refreshes the list when online. */
-const CACHE = 'source-check-v1.1.0';
+const CACHE = 'source-check-v1.1.1';
 const SHELL = ['./', 'index.html', 'matcher.js', 'sources.json', 'quality.json', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
 
 self.addEventListener('install', e => {

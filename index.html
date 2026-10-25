@@ -79,6 +79,24 @@ ul.list li small { display: block; color: var(--muted); }
 .history li { display: flex; justify-content: space-between; gap: 10px; }
 .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
 .dot.listed { background: var(--red); } .dot.lookalike { background: var(--amber); } .dot.clear { background: var(--green); } .dot.unknown, .dot.pending { background: var(--grey); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.chip { font-size: .8rem; font-weight: 600; padding: 6px 10px; border-radius: 999px; display: inline-flex; gap: 6px; align-items: center; }
+.chip span { font-weight: 400; color: var(--muted); }
+.chip[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: transparent; }
+.chip[aria-pressed="true"] span { color: inherit; opacity: .8; }
+@media (prefers-color-scheme: dark) { .chip[aria-pressed="true"] { color: #0c1528; } }
+details.browse { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+ul.entries summary { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; list-style: none; font-weight: 400; }
+ul.entries summary::-webkit-details-marker { display: none; }
+ul.entries .dom { font-family: ui-monospace, Menlo, monospace; font-size: .88rem; overflow-wrap: anywhere; min-width: 0; }
+ul.entries .cat { font-size: .75rem; color: var(--muted); text-align: right; flex: none; max-width: 45%; }
+ul.entries .more-info { padding: 4px 0 2px 10px; border-left: 3px solid var(--line); margin-top: 6px; }
+ul.entries .more-info p { margin: 2px 0; }
+button.more { width: 100%; margin-top: 8px; }
+.srcrow { display: flex; justify-content: space-between; gap: 10px; }
+.srcrow a { overflow-wrap: anywhere; min-width: 0; }
+.srcrow small { display: inline; flex: none; }
+.card, .result { overflow-wrap: anywhere; }
 footer { color: var(--muted); font-size: .8rem; text-align: center; padding: 12px 16px 28px; }
 .empty { color: var(--muted); font-size: .9rem; }
 </style>
@@ -126,7 +144,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; padding: 12p
 <script src="matcher.js"></script>
 <script>
 'use strict';
-const APP_VERSION = '1.1.0';
+const APP_VERSION = '1.1.1';
 const CATEGORY_LABEL = {
   'state-media': 'Russian state media',
   'pravda-network': 'Pravda network (“Portal Kombat”)',
@@ -298,35 +316,65 @@ function renderHistory() {
     h('small', {}, new Date(x.t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })))));
 }
 
+function hostOf(url) { try { return new URL(url).hostname.replace(/^www\./, ''); } catch (e) { return url; } }
+
 function renderAbout(data, quality) {
   const entries = data.entries || [];
   const counts = {};
   for (const e of entries) counts[e.category] = (counts[e.category] || 0) + 1;
-  const sources = new Map();
-  for (const e of entries) if (e.source_url && !sources.has(e.source_url)) sources.set(e.source_url, e.attributed_by || e.source_url);
+  const nRated = quality ? Object.keys(quality.ratings).length : 0;
+  const PAGE = 20;
+  let active = null, shown = PAGE;
 
-  const list = h('ul', { class: 'list' });
-  const search = h('input', { type: 'search', placeholder: `Search ${entries.length} entries`, 'aria-label': 'Search the list' });
+  const search = h('input', { type: 'search', placeholder: 'Search, e.g. pravda or bbc', 'aria-label': 'Search the list' });
+  const chips = h('div', { class: 'chips', role: 'group', 'aria-label': 'Filter by category' });
+  const status = h('p', { class: 'evidence', style: 'margin:10px 0 0' });
+  const list = h('ul', { class: 'list entries' });
+  const more = h('button', { type: 'button', class: 'more' }, 'Show more');
+
+  const chipFor = (cat, label, n) => {
+    const b = h('button', { type: 'button', class: 'chip', 'aria-pressed': String(active === cat) }, label, h('span', {}, n));
+    b.addEventListener('click', () => { active = active === cat ? null : cat; shown = PAGE; drawChips(); draw(); });
+    return b;
+  };
+  const drawChips = () => chips.replaceChildren(
+    chipFor(null, 'All', entries.length),
+    ...Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([c, n]) => chipFor(c, CATEGORY_LABEL[c] || c, n)));
+
   const draw = () => {
     const q = search.value.trim().toLowerCase();
-    if (!q) { list.replaceChildren(h('li', { class: 'empty' }, 'Type a website or outlet name to search the list.')); return; }
-    const hits = entries.filter(e => !q || [e.domain, e.youtube, e.name, e.attributed_by].some(v => v && v.toLowerCase().includes(q)));
-    list.replaceChildren(...hits.slice(0, 60).map(e => h('li', {},
-      h('code', {}, e.domain || e.youtube), e.name ? ` — ${e.name}` : '',
-      h('small', {}, `${CATEGORY_LABEL[e.category] || e.category} · ${e.attributed_by || ''}`))));
-    if (hits.length > 60) list.append(h('li', { class: 'empty' }, `…and ${hits.length - 60} more. Narrow your search.`));
+    const hits = entries.filter(e => (!active || e.category === active) &&
+      (!q || [e.domain, e.youtube, e.name, e.attributed_by].some(v => v && v.toLowerCase().includes(q))));
+    status.textContent = hits.length ? `${hits.length} ${hits.length === 1 ? 'entry' : 'entries'}${hits.length > shown ? ` · showing ${shown}` : ''}` : 'Nothing matches.';
+    list.replaceChildren(...hits.slice(0, shown).map(e => h('li', {},
+      h('details', {},
+        h('summary', {}, h('span', { class: 'dom' }, e.domain || e.youtube), active ? null : h('span', { class: 'cat' }, CATEGORY_LABEL[e.category] || e.category)),
+        h('div', { class: 'more-info' },
+          e.name ? h('p', {}, e.name) : null,
+          h('p', {}, 'Named by ', e.source_url ? h('a', { href: e.source_url, target: '_blank', rel: 'noopener' }, e.attributed_by || hostOf(e.source_url)) : (e.attributed_by || '—')),
+          e.note ? h('p', { class: 'evidence' }, e.note) : null)))));
+    more.hidden = hits.length <= shown;
   };
-  search.addEventListener('input', draw);
-  draw();
+  search.addEventListener('input', () => { shown = PAGE; draw(); });
+  more.addEventListener('click', () => { shown += PAGE * 2; draw(); });
+  drawChips(); draw();
+
+  // Sources grouped by the website that published them.
+  const bySite = new Map();
+  for (const e of entries) if (e.source_url) {
+    const site = hostOf(e.source_url);
+    if (!bySite.has(site)) bySite.set(site, { url: e.source_url, n: 0 });
+    bySite.get(site).n++;
+  }
 
   $('#about').replaceChildren(
-    h('p', { style: 'margin-top:0' }, `${entries.length} websites and channels, last updated ${data.updated}. Every entry is named in a published government report, sanctions decision or independent investigation.`),
-    quality ? h('p', { class: 'evidence' }, `Plus reliability scores for ${Object.keys(quality.ratings).toLocaleString('en-GB')} news sites from `, h('a', { href: quality.source_url, target: '_blank', rel: 'noopener' }, 'Lin et al. (2023)'), ', which combines six independent rating sets.') : null,
-    h('div', { class: 'stats' }, ...Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([c, n]) =>
-      h('div', { class: 'stat' }, h('b', {}, n), h('span', {}, CATEGORY_LABEL[c] || c)))),
-    search, list,
-    h('details', { style: 'margin-top:12px' }, h('summary', {}, `Sources (${sources.size})`),
-      h('ul', { class: 'list' }, ...[...sources].map(([url, by]) => h('li', {}, h('a', { href: url, target: '_blank', rel: 'noopener' }, by), h('small', {}, url))))));
+    h('p', { style: 'margin-top:0' }, h('b', {}, `${entries.length} sites`), ` on the influence list, updated ${data.updated}. Each one is named in a government report, sanctions decision or independent investigation.`),
+    quality ? h('p', { class: 'evidence' }, h('b', {}, nRated.toLocaleString('en-GB')), ' news sites have a reliability score, from ', h('a', { href: quality.source_url, target: '_blank', rel: 'noopener' }, 'Lin et al. (2023)'), '.') : null,
+    h('details', { class: 'browse' }, h('summary', {}, 'Browse the list'),
+      search, chips, status, list, more),
+    h('details', { class: 'browse' }, h('summary', {}, `Where the list comes from (${bySite.size} publishers)`),
+      h('ul', { class: 'list' }, ...[...bySite].sort((a, b) => b[1].n - a[1].n).map(([site, v]) =>
+        h('li', { class: 'srcrow' }, h('a', { href: v.url, target: '_blank', rel: 'noopener' }, site), h('small', {}, `${v.n} ${v.n === 1 ? 'entry' : 'entries'}`))))));
 }
 
 $('#check').addEventListener('click', () => runCheck($('#input').value));
