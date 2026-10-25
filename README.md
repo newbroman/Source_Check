@@ -4,10 +4,13 @@ A phone app (PWA) that tells you whether a link comes from a documented Russian 
 
 - **Red:** the site or channel is named in a published investigation or sanctions decision.
 - **Amber:** the address imitates a real news outlet (Doppelganger-style), or a channel uses a state outlet's name.
+- **Orange:** the site is not a documented Russian operation, but independent researchers rate its reliability low (under 40/100).
 - **Green:** the site is not on any list. This does not mean the story is accurate.
 - **Grey:** the link hides its destination (Google News links, link shorteners, Facebook posts).
 
 All checks run on the phone. The one exception is YouTube: the video address is sent to YouTube (or to noembed.com as a fallback) to look up the channel's name.
+
+Where a rating exists, every result also shows a 0–100 reliability score from Lin et al. (2023), *PNAS Nexus*, doi:10.1093/pnasnexus/pgad286. That score combines six independent rating sets for about 11,500 news sites (data: https://www.domain-quality.info, `quality.json`). It measures the publisher's track record, not its political leaning. Platforms such as YouTube, Facebook and Substack are not rated.
 
 ## Files
 - `index.html` — the app (UI)

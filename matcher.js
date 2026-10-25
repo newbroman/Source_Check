@@ -55,6 +55,17 @@
     { brand: 'NewsGuard', labels: ['newsguard', 'newsguardtech'], genuine: ['newsguardtech.com', 'newsguardrealitycheck.com'] }
   ];
 
+  // Platforms host everyone's content, so a platform-wide reliability score says
+  // nothing about the post in front of you. Skip ratings for these and their subdomains.
+  const PLATFORMS = ['youtube.com', 'youtu.be', 'facebook.com', 'fb.watch', 'instagram.com', 'twitter.com', 'x.com',
+    'tiktok.com', 'reddit.com', 'medium.com', 'substack.com', 'blogspot.com', 'wordpress.com', 'google.com',
+    'msn.com', 'yahoo.com', 't.me', 'telegram.org', 'rumble.com', 'bitchute.com', 'odysee.com', 'vimeo.com',
+    'dailymotion.com', 'github.io', 'linkedin.com', 'flipboard.com', 'archive.org', 'archive.ph', 'archive.today',
+    'wikipedia.org', 'apple.news', 'tumblr.com', 'quora.com', 'pinterest.com', 'threads.net', 'bsky.app', 'vk.com', 'ok.ru', 'dzen.ru'];
+
+  // Reliability bands for the 0-100 score (Lin et al. 2023 ensemble rating).
+  const LOW = 40, HIGH = 60;
+
   const SHORTENERS = new Set(['t.co', 'bit.ly', 'tinyurl.com', 'ow.ly', 'buff.ly', 'is.gd', 'goo.gl', 'rb.gy', 'cutt.ly', 'shorturl.at', 'tiny.cc', 'lnkd.in', 'dlvr.it', 'fb.me', 'on.fb.me', 'trib.al', 'aje.io', 'ift.tt', 'shorturl.com', 's.id']);
 
   // Edit distance where swapping two neighbouring letters counts as one edit
@@ -139,7 +150,21 @@
     return host === domain || host.endsWith('.' + domain);
   }
 
-  function buildIndex(data) {
+  function lookupQuality(host, index) {
+    if (PLATFORMS.some(p => isOrUnder(host, p))) return { platform: true };
+    const ratings = index.quality || {};
+    const parts = host.split('.');
+    for (let i = 0; i < parts.length - 1; i++) {
+      const candidate = parts.slice(i).join('.');
+      if (Object.prototype.hasOwnProperty.call(ratings, candidate)) {
+        const score = ratings[candidate];
+        return { score, matched: candidate, band: score < LOW ? 'low' : score < HIGH ? 'mixed' : 'higher' };
+      }
+    }
+    return null;
+  }
+
+  function buildIndex(data, quality) {
     const domains = new Map();
     const youtube = new Map();
     const names = new Map();
@@ -154,7 +179,7 @@
       }
       if (e.name && e.category === 'state-media') names.set(e.name.toLowerCase(), e);
     }
-    return { domains, youtube, names, data };
+    return { domains, youtube, names, data, quality: (quality && quality.ratings) || {} };
   }
 
   function lookupDomain(host, index) {
@@ -221,7 +246,7 @@
       return { url: rawUrl, verdict: 'unknown', reason: 'bad-url' };
     }
     const host = normaliseHost(u.hostname);
-    const base = { url: rawUrl, finalUrl, host, unwrapped: finalUrl !== rawUrl };
+    const base = { url: rawUrl, finalUrl, host, unwrapped: finalUrl !== rawUrl, quality: lookupQuality(host, index) };
 
     const listed = lookupDomain(host, index);
     if (listed) return Object.assign(base, { verdict: 'listed', entry: listed.entry, matched: listed.matched });
@@ -244,6 +269,7 @@
     const look = lookalike(host);
     if (look) return Object.assign(base, { verdict: 'lookalike', lookalike: look });
 
+    if (base.quality && base.quality.band === 'low') return Object.assign(base, { verdict: 'low' });
     return Object.assign(base, { verdict: 'clear' });
   }
 
@@ -263,5 +289,5 @@
     return extractUrls(text).map(u => checkUrl(u, index));
   }
 
-  return { extractUrls, unwrap, normaliseHost, registrable, buildIndex, lookupDomain, lookalike, checkUrl, classifyChannel, check, BRANDS, _lev: lev };
+  return { extractUrls, unwrap, normaliseHost, registrable, buildIndex, lookupDomain, lookupQuality, lookalike, checkUrl, classifyChannel, check, BRANDS, _lev: lev };
 });

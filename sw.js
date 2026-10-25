@@ -1,6 +1,6 @@
 /* Source Check service worker: works offline, refreshes the list when online. */
-const CACHE = 'source-check-v1.0.0';
-const SHELL = ['./', 'index.html', 'matcher.js', 'sources.json', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
+const CACHE = 'source-check-v1.1.0';
+const SHELL = ['./', 'index.html', 'matcher.js', 'sources.json', 'quality.json', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
@@ -18,7 +18,7 @@ self.addEventListener('fetch', e => {
 
   // Shared links arrive as ./?url=… — serve the cached page for any query string.
   const isPage = e.request.mode === 'navigate';
-  const isList = url.pathname.endsWith('/sources.json');
+  const isList = /\/(sources|quality)\.json$/.test(url.pathname);
 
   if (isList || isPage) {
     // Network first so list updates arrive quickly; fall back to cache offline.

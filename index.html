@@ -14,6 +14,7 @@
   --bg: #f4f3ef; --card: #ffffff; --ink: #16181d; --muted: #5d6270; --line: #dcdad3;
   --brand: #14213d; --brand-ink: #ffffff; --accent: #2f5bd3;
   --red: #b3261e; --red-bg: #fbe9e7; --amber: #8a5a00; --amber-bg: #fff3d6;
+  --orange: #a84b00; --orange-bg: #fde8d4;
   --green: #1d6b3a; --green-bg: #e6f4ea; --grey: #4a4f5a; --grey-bg: #eceef2;
   --radius: 14px;
 }
@@ -22,6 +23,7 @@
     --bg: #101216; --card: #1a1d23; --ink: #eceef2; --muted: #a2a8b5; --line: #2c3039;
     --brand: #0c1528; --brand-ink: #eceef2; --accent: #8fb0ff;
     --red: #ff8a80; --red-bg: #3a1714; --amber: #ffc857; --amber-bg: #33270c;
+    --orange: #ffa94d; --orange-bg: #3a230d;
     --green: #7fd69b; --green-bg: #12301d; --grey: #c3c8d2; --grey-bg: #252932;
   }
 }
@@ -43,6 +45,12 @@ button.primary { background: var(--accent); color: #fff; border-color: transpare
 .result { border-radius: var(--radius); padding: 14px; margin-bottom: 12px; border: 1px solid var(--line); background: var(--card); border-left-width: 6px; }
 .result.listed { border-left-color: var(--red); background: var(--red-bg); }
 .result.lookalike { border-left-color: var(--amber); background: var(--amber-bg); }
+.result.low { border-left-color: var(--orange); background: var(--orange-bg); }
+.low .verdict { color: var(--orange); } .low .badge { background: var(--orange); } .dot.low { background: var(--orange); }
+.meter { display: flex; align-items: center; gap: 8px; margin-top: 8px; font-size: .9rem; }
+.meter .bar { flex: 1; max-width: 160px; height: 8px; border-radius: 4px; background: var(--line); overflow: hidden; }
+.meter .bar i { display: block; height: 100%; }
+.meter .bar i.low { background: var(--orange); } .meter .bar i.mixed { background: var(--amber); } .meter .bar i.higher { background: var(--green); }
 .result.clear { border-left-color: var(--green); background: var(--green-bg); }
 .result.unknown, .result.pending { border-left-color: var(--grey); background: var(--grey-bg); }
 .verdict { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.05rem; }
@@ -78,7 +86,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; padding: 12p
 <body>
 <header>
   <h1>Source Check</h1>
-  <p>Is this link from a documented Russian influence source?</p>
+  <p>Russian influence sources and site reliability</p>
 </header>
 <main>
   <section class="card" aria-label="Check a link">
@@ -105,7 +113,9 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; padding: 12p
       <summary>What the colours mean</summary>
       <p><b style="color:var(--red)">Red</b> — the website or channel is named in a published investigation or sanctions decision as Russian state media or part of a Russian influence operation.</p>
       <p><b style="color:var(--amber)">Amber</b> — not on a list, but the address imitates a well-known outlet (a trick used by the Doppelganger campaign and others), or a channel uses a state outlet's name.</p>
+      <p><b style="color:var(--orange)">Orange</b> — not a documented Russian operation, but independent researchers give the site a low reliability score (under 40 out of 100).</p>
       <p><b style="color:var(--green)">Green</b> — not on any list. That does <em>not</em> mean the story is accurate; it only means the source isn't a documented Russian operation.</p>
+      <p><b>Reliability score</b> — shown where available: a 0–100 rating for about 11,500 news sites, combining six independent rating sets (Lin et al., 2023, <i>PNAS Nexus</i>). Under 40 is low, 40–59 mixed, 60 and over generally reliable. It rates the publisher's track record, not the political leaning, and not the individual story. The ratings date from 2023.</p>
       <p><b style="color:var(--grey)">Grey</b> — the link hides where it really goes (Google News, link shorteners, Facebook posts). Open it, then share the article itself.</p>
       <p class="hint">This app judges the <em>source</em>, not the content. Plenty of people share similar views without any connection to a state operation. Everything is checked on your phone; nothing you share is sent anywhere, except a YouTube video address, which is sent to YouTube to look up the channel name.</p>
     </details>
@@ -116,7 +126,7 @@ footer { color: var(--muted); font-size: .8rem; text-align: center; padding: 12p
 <script src="matcher.js"></script>
 <script>
 'use strict';
-const APP_VERSION = '1.0.0';
+const APP_VERSION = '1.1.0';
 const CATEGORY_LABEL = {
   'state-media': 'Russian state media',
   'pravda-network': 'Pravda network (“Portal Kombat”)',
@@ -144,10 +154,12 @@ const store = {
 
 async function loadData() {
   try {
-    const r = await fetch('sources.json', { cache: 'no-cache' });
-    const data = await r.json();
-    INDEX = Matcher.buildIndex(data);
-    renderAbout(data);
+    const [data, quality] = await Promise.all([
+      fetch('sources.json', { cache: 'no-cache' }).then(r => r.json()),
+      fetch('quality.json', { cache: 'no-cache' }).then(r => r.json()).catch(() => null)
+    ]);
+    INDEX = Matcher.buildIndex(data, quality);
+    renderAbout(data, quality);
     $('#footer').textContent = `Source Check v${APP_VERSION} · list updated ${data.updated}`;
   } catch (e) {
     $('#about').replaceChildren(h('p', { class: 'empty' }, 'Could not load the list. Check your connection and reopen the app.'));
@@ -159,6 +171,22 @@ function sourceLink(entry) {
   const by = entry.attributed_by || 'published report';
   return h('p', { class: 'evidence' }, 'Named by ', entry.source_url ? h('a', { href: entry.source_url, target: '_blank', rel: 'noopener' }, by) : by,
     entry.note ? ` — ${entry.note}` : '');
+}
+
+const BAND_TEXT = { low: 'low reliability', mixed: 'mixed reliability', higher: 'generally reliable' };
+function qualityLine(res) {
+  const q = res.quality;
+  if (!q || q.platform || res.platform === 'youtube') return null;
+  if (q.score == null) return null;
+  return h('div', { class: 'meter' },
+    h('span', {}, `Reliability ${q.score}/100`),
+    h('span', { class: 'bar', 'aria-hidden': 'true' }, h('i', { class: q.band, style: `width:${Math.max(3, q.score)}%` })),
+    h('span', { class: 'evidence' }, BAND_TEXT[q.band]));
+}
+function unrated(res) {
+  const q = res.quality;
+  if (q || res.platform === 'youtube') return null;
+  return h('p', { class: 'evidence' }, 'No independent reliability score for this site.');
 }
 
 function card(verdict, icon, title, host, ...body) {
@@ -176,7 +204,7 @@ function render(res) {
       const label = CATEGORY_LABEL[e.category] || 'Documented influence source';
       return card('listed', '!', label, shown,
         h('p', {}, e.name ? `${e.name}${res.matched && res.matched !== res.host ? ` (${res.matched})` : ''}` : ''),
-        sourceLink(e));
+        sourceLink(e), qualityLine(res));
     }
     case 'lookalike': {
       if (res.nameMatch) {
@@ -190,13 +218,18 @@ function render(res) {
         : `The address is very close to ${L.brand}'s.`;
       return card('lookalike', '?', `Looks like an imitation of ${L.brand}`, shown,
         h('p', {}, `${why} The real site is ${L.real}. Russian operations such as Doppelganger have published fake articles on copies of real news sites.`),
-        h('p', { class: 'evidence' }, 'Not on any list yet — this is an automatic warning. Some similar names are innocent.'));
+        h('p', { class: 'evidence' }, 'Not on any list yet — this is an automatic warning. Some similar names are innocent.'), qualityLine(res));
     }
+    case 'low':
+      return card('low', '▼', 'Low reliability rating', shown,
+        h('p', {}, 'Not a documented Russian operation, but independent researchers rate this site’s reliability as low. Check the story against other outlets before trusting or sharing it.'),
+        qualityLine(res));
     case 'clear':
       return card('clear', '✓', res.platform === 'youtube' ? `Channel not on any list` : 'Not on any list', res.channel ? `${res.channel}${res.handle ? ' · ' + res.handle : ''}` : shown,
         h('p', { class: 'evidence' }, res.platform === 'youtube'
           ? 'YouTube removes most Russian state-linked channels itself, so few channels are listed here. Treat this as a weak check.'
-          : 'This source isn’t a documented Russian influence site. That doesn’t make the story accurate.'));
+          : 'This source isn’t a documented Russian influence site. That doesn’t make the story accurate.'),
+        qualityLine(res), unrated(res));
     case 'pending':
       return card('pending', '…', 'Looking up the YouTube channel…', shown);
     default: {
@@ -265,7 +298,7 @@ function renderHistory() {
     h('small', {}, new Date(x.t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })))));
 }
 
-function renderAbout(data) {
+function renderAbout(data, quality) {
   const entries = data.entries || [];
   const counts = {};
   for (const e of entries) counts[e.category] = (counts[e.category] || 0) + 1;
@@ -288,6 +321,7 @@ function renderAbout(data) {
 
   $('#about').replaceChildren(
     h('p', { style: 'margin-top:0' }, `${entries.length} websites and channels, last updated ${data.updated}. Every entry is named in a published government report, sanctions decision or independent investigation.`),
+    quality ? h('p', { class: 'evidence' }, `Plus reliability scores for ${Object.keys(quality.ratings).toLocaleString('en-GB')} news sites from `, h('a', { href: quality.source_url, target: '_blank', rel: 'noopener' }, 'Lin et al. (2023)'), ', which combines six independent rating sets.') : null,
     h('div', { class: 'stats' }, ...Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([c, n]) =>
       h('div', { class: 'stat' }, h('b', {}, n), h('span', {}, CATEGORY_LABEL[c] || c)))),
     search, list,

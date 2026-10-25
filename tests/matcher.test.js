@@ -53,4 +53,20 @@ t('trailing punctuation and duplicates', () => assert.deepStrictEqual(v('See htt
 t('no links', () => assert.deepStrictEqual(v('just some words'), []));
 t('registrable handles co.uk', () => assert.strictEqual(M.registrable('news.bbc.co.uk'), 'bbc.co.uk'));
 
+const Q = M.buildIndex(data, { ratings: { 'infowars.com': 5, 'reuters.com': 100, 'bbc.co.uk': 72, 'dailyexample.com': 50, 'youtube.com': 38, 'blogspot.com': 67, 'rt.com': 29 } });
+t('low-rated site gets low verdict', () => assert.strictEqual(M.check('https://www.infowars.com/x', Q)[0].verdict, 'low'));
+t('high-rated site stays clear with score', () => {
+  const r = M.check('https://news.bbc.co.uk/x', Q)[0];
+  assert.strictEqual(r.verdict, 'clear'); assert.strictEqual(r.quality.score, 72); assert.strictEqual(r.quality.band, 'higher');
+});
+t('mixed band', () => assert.strictEqual(M.check('https://dailyexample.com/a', Q)[0].quality.band, 'mixed'));
+t('listed beats low rating, keeps score', () => {
+  const r = M.check('https://rt.com/a', Q)[0]; assert.strictEqual(r.verdict, 'listed'); assert.strictEqual(r.quality.score, 29);
+});
+t('platforms are not rated', () => {
+  assert.ok(M.check('https://someblog.blogspot.com/p', Q)[0].quality.platform);
+  assert.ok(M.check('https://www.youtube.com/@x', Q)[0].quality.platform);
+});
+t('unrated site has no score', () => assert.strictEqual(M.check('https://unknown-site.example/a', Q)[0].quality, null));
+
 console.log(`\n${n} tests passed`);
