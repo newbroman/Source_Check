@@ -1,0 +1,463 @@
+[
+ {
+  "domain": "news-pravda.com",
+  "name": "Pravda hub (news-pravda.com)",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Hub; country/topic subdomains e.g. us., eu., nato., macron., trump., spain., srpska., md., ge., francais., deutsch., catalan., greece., denmark.news-pravda.com (also in NewsGuard, Maldita, Myth Detector). ~140 subdomains; match parent only."
+ },
+ {
+  "domain": "moldova-news.com",
+  "name": "Moldova News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Standalone 2024 domain"
+ },
+ {
+  "domain": "latvia-news.com",
+  "name": "Latvia News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Standalone 2024 domain"
+ },
+ {
+  "domain": "lithuania-news.com",
+  "name": "Lithuania News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Standalone 2024 domain"
+ },
+ {
+  "domain": "news-estonia.com",
+  "name": "News Estonia",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Standalone 2024 domain"
+ },
+ {
+  "domain": "georgia-news.com",
+  "name": "Georgia News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Standalone 2024 domain"
+ },
+ {
+  "domain": "news-armenia.com",
+  "name": "News Armenia",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Standalone 2024 domain"
+ },
+ {
+  "domain": "crimea-news.com",
+  "name": "Crimea News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Described as first Portal Kombat site; also named in DFRLab 2025-03-12"
+ },
+ {
+  "domain": "sochi-news.net",
+  "name": "Sochi News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Article text gives sochi-news[.]com but archive link cites .net; uncertain which TLD is correct"
+ },
+ {
+  "domain": "sochi-news.com",
+  "name": "Sochi News (.com variant)",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "UNCERTAIN: see sochi-news.net"
+ },
+ {
+  "domain": "vladivostok-news.net",
+  "name": "Vladivostok News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/"
+ },
+ {
+  "domain": "yaroslavl-news.net",
+  "name": "Yaroslavl News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Also named in DFRLab 2025-03-12"
+ },
+ {
+  "domain": "vladimir-news.net",
+  "name": "Vladimir News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/"
+ },
+ {
+  "domain": "alchevsk-news.ru",
+  "name": "Alchevsk News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Also in NewsGuard PDF list"
+ },
+ {
+  "domain": "dnr-news.ru",
+  "name": "DNR News",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/02/24/russia-pravda-network-expands-worldwide/",
+  "note": "Also in NewsGuard PDF list"
+ },
+ {
+  "domain": "dnr-news.com",
+  "name": "DNR News (.com)",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab",
+  "source_url": "https://dfrlab.org/2025/03/12/pravda-network-wikipedia-ll"
+ },
+ {
+  "domain": "pravda-fr.com",
+  "name": "Pravda FR",
+  "category": "pravda-network",
+  "attributed_by": "VIGINUM (as reported by Europe 1; also NewsGuard)",
+  "source_url": "https://www.europe1.fr/societe/guerre-en-ukraine-ce-reseau-coordonne-pour-servir-la-propagande-russe-en-europe-et-aux-etats-unis-4230280",
+  "note": "Named in Europe 1 report on VIGINUM Feb 2024 findings and NewsGuard PDF; VIGINUM PDF itself not opened"
+ },
+ {
+  "domain": "pravda-en.com",
+  "name": "Pravda EN",
+  "category": "pravda-network",
+  "attributed_by": "VIGINUM (as reported by Europe 1; also NewsGuard)",
+  "source_url": "https://www.europe1.fr/societe/guerre-en-ukraine-ce-reseau-coordonne-pour-servir-la-propagande-russe-en-europe-et-aux-etats-unis-4230280",
+  "note": "Named in Europe 1 report on VIGINUM Feb 2024 findings and NewsGuard PDF; VIGINUM PDF itself not opened"
+ },
+ {
+  "domain": "pravda-de.com",
+  "name": "Pravda DE",
+  "category": "pravda-network",
+  "attributed_by": "VIGINUM (as reported by Europe 1; also NewsGuard)",
+  "source_url": "https://www.europe1.fr/societe/guerre-en-ukraine-ce-reseau-coordonne-pour-servir-la-propagande-russe-en-europe-et-aux-etats-unis-4230280",
+  "note": "Named in Europe 1 report on VIGINUM Feb 2024 findings and NewsGuard PDF; VIGINUM PDF itself not opened"
+ },
+ {
+  "domain": "pravda-pl.com",
+  "name": "Pravda PL",
+  "category": "pravda-network",
+  "attributed_by": "VIGINUM (as reported by Europe 1; also NewsGuard)",
+  "source_url": "https://www.europe1.fr/societe/guerre-en-ukraine-ce-reseau-coordonne-pour-servir-la-propagande-russe-en-europe-et-aux-etats-unis-4230280",
+  "note": "Named in Europe 1 report on VIGINUM Feb 2024 findings and NewsGuard PDF; VIGINUM PDF itself not opened"
+ },
+ {
+  "domain": "pravda-es.com",
+  "name": "Pravda ES",
+  "category": "pravda-network",
+  "attributed_by": "VIGINUM (as reported by Europe 1; also NewsGuard)",
+  "source_url": "https://www.europe1.fr/societe/guerre-en-ukraine-ce-reseau-coordonne-pour-servir-la-propagande-russe-en-europe-et-aux-etats-unis-4230280",
+  "note": "Named in Europe 1 report on VIGINUM Feb 2024 findings and NewsGuard PDF; VIGINUM PDF itself not opened"
+ },
+ {
+  "domain": "pravda-it.com",
+  "name": "Pravda IT",
+  "category": "pravda-network",
+  "attributed_by": "DFRLab/EDMO-reported (via archived link)",
+  "source_url": "https://edmo.eu/?p=8960",
+  "note": "Named in EDMO-hosted article; not verified in a primary report"
+ },
+ {
+  "domain": "abkhazia-news.com",
+  "name": "Abkhazia News",
+  "category": "pravda-network",
+  "attributed_by": "Myth Detector",
+  "source_url": "https://mythdetector.com/en/profiles/pravda-network-2/",
+  "note": "Secondary source (Georgian fact-checker)"
+ },
+ {
+  "domain": "ossetia-news.com",
+  "name": "Ossetia News",
+  "category": "pravda-network",
+  "attributed_by": "Myth Detector",
+  "source_url": "https://mythdetector.com/en/profiles/pravda-network-2/",
+  "note": "Secondary source (Georgian fact-checker)"
+ },
+ {
+  "domain": "news-kiev.ru",
+  "name": "News Kiev (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardrealitycheck.com/p/a-well-funded-moscow-based-global",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify); Myth Detector writes newskiev.ru as separate network - conflict"
+ },
+ {
+  "domain": "kherson-news.ru",
+  "name": "Kherson News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardrealitycheck.com/p/a-well-funded-moscow-based-global",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "donetsk-news.ru",
+  "name": "Donetsk News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardrealitycheck.com/p/a-well-funded-moscow-based-global",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "mariupol-news.ru",
+  "name": "Mariupol News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "news-kharkov.ru",
+  "name": "News Kharkov (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "lnr-news.ru",
+  "name": "LNR News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "tiraspol-news.ru",
+  "name": "Tiraspol News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "dnepr-news.ru",
+  "name": "Dnepr News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "gorlovka-news.ru",
+  "name": "Gorlovka News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "rovno-news.ru",
+  "name": "Rovno News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "nikolaev-news.ru",
+  "name": "Nikolaev News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "cherkassy-news.ru",
+  "name": "Cherkassy News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "khmelnitskiy-news.ru",
+  "name": "Khmelnitskiy News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "zhitomir-news.ru",
+  "name": "Zhitomir News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "zp-news.ru",
+  "name": "Zp News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "berdyansk-news.ru",
+  "name": "Berdyansk News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "chernigov-news.ru",
+  "name": "Chernigov News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "ternopol-news.ru",
+  "name": "Ternopol News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "bc-news.ru",
+  "name": "Bc News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "kirovograd-news.ru",
+  "name": "Kirovograd News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "lvov-news.ru",
+  "name": "Lvov News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "poltava-news.ru",
+  "name": "Poltava News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "sumy-news.ru",
+  "name": "Sumy News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "melitopol-news.ru",
+  "name": "Melitopol News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "uzhgorod-news.ru",
+  "name": "Uzhgorod News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "vin-news.ru",
+  "name": "Vin News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "krivoy-rog-news.ru",
+  "name": "Krivoy Rog News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "slavyansk-news.ru",
+  "name": "Slavyansk News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "if-news.ru",
+  "name": "If News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "kremenchug-news.ru",
+  "name": "Kremenchug News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "lugansk-news.ru",
+  "name": "Lugansk News (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "news-makeevka.ru",
+  "name": "News Makeevka (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ },
+ {
+  "domain": "news-odessa.ru",
+  "name": "News Odessa (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify); Myth Detector classes news-odessa.ru as a separate 'ZOV network' - conflict"
+ },
+ {
+  "domain": "news-berdyansk.ru",
+  "name": "News Berdyansk (.ru)",
+  "category": "pravda-network",
+  "attributed_by": "NewsGuard",
+  "source_url": "https://www.newsguardtech.com/wp-content/uploads/2024/03/Pravda-en.com_.pdf",
+  "note": "NewsGuard Mar 2024 list of 41 sites (extracted via page summarizer; re-verify)"
+ }
+]

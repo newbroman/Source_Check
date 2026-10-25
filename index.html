@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Source Check</title>
+<meta name="description" content="Check whether a link comes from a documented Russian state media or influence-operation website.">
+<meta name="theme-color" content="#14213d">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+:root {
+  --bg: #f4f3ef; --card: #ffffff; --ink: #16181d; --muted: #5d6270; --line: #dcdad3;
+  --brand: #14213d; --brand-ink: #ffffff; --accent: #2f5bd3;
+  --red: #b3261e; --red-bg: #fbe9e7; --amber: #8a5a00; --amber-bg: #fff3d6;
+  --green: #1d6b3a; --green-bg: #e6f4ea; --grey: #4a4f5a; --grey-bg: #eceef2;
+  --radius: 14px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101216; --card: #1a1d23; --ink: #eceef2; --muted: #a2a8b5; --line: #2c3039;
+    --brand: #0c1528; --brand-ink: #eceef2; --accent: #8fb0ff;
+    --red: #ff8a80; --red-bg: #3a1714; --amber: #ffc857; --amber-bg: #33270c;
+    --green: #7fd69b; --green-bg: #12301d; --grey: #c3c8d2; --grey-bg: #252932;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body { font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; padding-bottom: env(safe-area-inset-bottom); }
+header { background: var(--brand); color: var(--brand-ink); padding: calc(14px + env(safe-area-inset-top)) 16px 14px; }
+header h1 { margin: 0; font-size: 1.25rem; letter-spacing: .01em; }
+header p { margin: 2px 0 0; font-size: .85rem; opacity: .8; }
+main { max-width: 640px; margin: 0 auto; padding: 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 14px; margin-bottom: 14px; }
+textarea { width: 100%; min-height: 84px; resize: vertical; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px; }
+textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.row { display: flex; gap: 8px; margin-top: 10px; }
+button { font: inherit; font-weight: 600; border-radius: 10px; padding: 10px 14px; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+button.primary { background: var(--accent); color: #fff; border-color: transparent; flex: 1; }
+@media (prefers-color-scheme: dark) { button.primary { color: #0c1528; } }
+.hint { color: var(--muted); font-size: .85rem; margin: 8px 0 0; }
+.result { border-radius: var(--radius); padding: 14px; margin-bottom: 12px; border: 1px solid var(--line); background: var(--card); border-left-width: 6px; }
+.result.listed { border-left-color: var(--red); background: var(--red-bg); }
+.result.lookalike { border-left-color: var(--amber); background: var(--amber-bg); }
+.result.clear { border-left-color: var(--green); background: var(--green-bg); }
+.result.unknown, .result.pending { border-left-color: var(--grey); background: var(--grey-bg); }
+.verdict { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.05rem; }
+.listed .verdict { color: var(--red); } .lookalike .verdict { color: var(--amber); }
+.clear .verdict { color: var(--green); } .unknown .verdict, .pending .verdict { color: var(--grey); }
+.badge { display: inline-flex; width: 26px; height: 26px; border-radius: 50%; align-items: center; justify-content: center; font-size: .95rem; color: #fff; flex: none; }
+.listed .badge { background: var(--red); } .lookalike .badge { background: var(--amber); }
+.clear .badge { background: var(--green); } .unknown .badge, .pending .badge { background: var(--grey); }
+@media (prefers-color-scheme: dark) { .badge { color: #101216; } }
+.host { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: .9rem; word-break: break-all; margin: 6px 0 4px; }
+.result p { margin: 6px 0 0; }
+.evidence { font-size: .9rem; color: var(--muted); }
+a { color: var(--accent); }
+h2 { font-size: 1rem; margin: 22px 0 8px; }
+details summary { cursor: pointer; font-weight: 600; }
+.stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; margin: 10px 0; }
+.stat { background: var(--bg); border-radius: 10px; padding: 8px 10px; }
+.stat b { display: block; font-size: 1.2rem; }
+.stat span { font-size: .8rem; color: var(--muted); }
+input[type=search] { width: 100%; font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 9px 10px; }
+ul.list { list-style: none; padding: 0; margin: 10px 0 0; }
+ul.list li { padding: 7px 0; border-top: 1px solid var(--line); font-size: .9rem; }
+ul.list li:first-child { border-top: 0; }
+ul.list li code { font-size: .85rem; word-break: break-all; }
+ul.list li small { display: block; color: var(--muted); }
+.history li { display: flex; justify-content: space-between; gap: 10px; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.dot.listed { background: var(--red); } .dot.lookalike { background: var(--amber); } .dot.clear { background: var(--green); } .dot.unknown, .dot.pending { background: var(--grey); }
+footer { color: var(--muted); font-size: .8rem; text-align: center; padding: 12px 16px 28px; }
+.empty { color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Source Check</h1>
+  <p>Is this link from a documented Russian influence source?</p>
+</header>
+<main>
+  <section class="card" aria-label="Check a link">
+    <label for="input" class="hint" style="margin:0 0 6px;display:block">Share a post or article to this app, or paste a link or text:</label>
+    <textarea id="input" placeholder="https://…" autocapitalize="off" autocomplete="off" spellcheck="false"></textarea>
+    <div class="row">
+      <button id="paste" type="button">Paste</button>
+      <button id="check" type="button" class="primary">Check</button>
+    </div>
+  </section>
+
+  <section id="results" aria-live="polite"></section>
+
+  <h2>Recent checks</h2>
+  <section class="card"><ul id="history" class="list history"></ul></section>
+
+  <h2>About the list</h2>
+  <section class="card" id="about">
+    <p class="empty">Loading list…</p>
+  </section>
+
+  <section class="card">
+    <details>
+      <summary>What the colours mean</summary>
+      <p><b style="color:var(--red)">Red</b> — the website or channel is named in a published investigation or sanctions decision as Russian state media or part of a Russian influence operation.</p>
+      <p><b style="color:var(--amber)">Amber</b> — not on a list, but the address imitates a well-known outlet (a trick used by the Doppelganger campaign and others), or a channel uses a state outlet's name.</p>
+      <p><b style="color:var(--green)">Green</b> — not on any list. That does <em>not</em> mean the story is accurate; it only means the source isn't a documented Russian operation.</p>
+      <p><b style="color:var(--grey)">Grey</b> — the link hides where it really goes (Google News, link shorteners, Facebook posts). Open it, then share the article itself.</p>
+      <p class="hint">This app judges the <em>source</em>, not the content. Plenty of people share similar views without any connection to a state operation. Everything is checked on your phone; nothing you share is sent anywhere, except a YouTube video address, which is sent to YouTube to look up the channel name.</p>
+    </details>
+  </section>
+</main>
+<footer id="footer">Source Check</footer>
+
+<script src="matcher.js"></script>
+<script>
+'use strict';
+const APP_VERSION = '1.0.0';
+const CATEGORY_LABEL = {
+  'state-media': 'Russian state media',
+  'pravda-network': 'Pravda network (“Portal Kombat”)',
+  'doppelganger': 'Doppelganger clone site',
+  'storm-1516': 'Storm-1516 / CopyCop fake local news',
+  'impersonation': 'Fake copy of a real outlet',
+  'youtube': 'YouTube channel'
+};
+let INDEX = null;
+
+const $ = s => document.querySelector(s);
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k === 'class') el.className = v; else el.setAttribute(k, v);
+  }
+  for (const k of kids.flat()) if (k != null && k !== false) el.append(k.nodeType ? k : String(k));
+  return el;
+}
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+};
+
+async function loadData() {
+  try {
+    const r = await fetch('sources.json', { cache: 'no-cache' });
+    const data = await r.json();
+    INDEX = Matcher.buildIndex(data);
+    renderAbout(data);
+    $('#footer').textContent = `Source Check v${APP_VERSION} · list updated ${data.updated}`;
+  } catch (e) {
+    $('#about').replaceChildren(h('p', { class: 'empty' }, 'Could not load the list. Check your connection and reopen the app.'));
+  }
+}
+
+function sourceLink(entry) {
+  if (!entry) return null;
+  const by = entry.attributed_by || 'published report';
+  return h('p', { class: 'evidence' }, 'Named by ', entry.source_url ? h('a', { href: entry.source_url, target: '_blank', rel: 'noopener' }, by) : by,
+    entry.note ? ` — ${entry.note}` : '');
+}
+
+function card(verdict, icon, title, host, ...body) {
+  return h('div', { class: `result ${verdict}` },
+    h('div', { class: 'verdict' }, h('span', { class: 'badge', 'aria-hidden': 'true' }, icon), title),
+    host ? h('div', { class: 'host' }, host) : null,
+    ...body);
+}
+
+function render(res) {
+  const shown = res.unwrapped ? `${res.host} (unwrapped from a redirect link)` : res.host;
+  switch (res.verdict) {
+    case 'listed': {
+      const e = res.entry;
+      const label = CATEGORY_LABEL[e.category] || 'Documented influence source';
+      return card('listed', '!', label, shown,
+        h('p', {}, e.name ? `${e.name}${res.matched && res.matched !== res.host ? ` (${res.matched})` : ''}` : ''),
+        sourceLink(e));
+    }
+    case 'lookalike': {
+      if (res.nameMatch) {
+        return card('lookalike', '?', `Channel uses the name “${res.channel}”`, res.handle || shown,
+          h('p', {}, `This matches the state outlet ${res.nameMatch.name}, but the channel itself isn't on any list. It may be a re-upload, a fan channel or an imitation.`),
+          sourceLink(res.nameMatch));
+      }
+      const L = res.lookalike;
+      const why = L.how === 'subdomain' ? `The address contains ${L.real} but is really a different website.`
+        : L.how === 'same-name' ? `It uses the name of ${L.brand} on a different web address.`
+        : `The address is very close to ${L.brand}'s.`;
+      return card('lookalike', '?', `Looks like an imitation of ${L.brand}`, shown,
+        h('p', {}, `${why} The real site is ${L.real}. Russian operations such as Doppelganger have published fake articles on copies of real news sites.`),
+        h('p', { class: 'evidence' }, 'Not on any list yet — this is an automatic warning. Some similar names are innocent.'));
+    }
+    case 'clear':
+      return card('clear', '✓', res.platform === 'youtube' ? `Channel not on any list` : 'Not on any list', res.channel ? `${res.channel}${res.handle ? ' · ' + res.handle : ''}` : shown,
+        h('p', { class: 'evidence' }, res.platform === 'youtube'
+          ? 'YouTube removes most Russian state-linked channels itself, so few channels are listed here. Treat this as a weak check.'
+          : 'This source isn’t a documented Russian influence site. That doesn’t make the story accurate.'));
+    case 'pending':
+      return card('pending', '…', 'Looking up the YouTube channel…', shown);
+    default: {
+      const msg = {
+        'google-news': 'Google News links hide the publisher. Open the story, then share it from the publisher’s page.',
+        'shortener': 'This is a shortened link, so the real website is hidden. Open it, then share the page you land on.',
+        'facebook-post': 'This is a Facebook post, which the app can’t read. If the post contains an article link, open that and share it instead.',
+        'youtube-other': 'Share a specific video or a channel page to check it.',
+        'youtube-offline': 'Couldn’t reach YouTube to find the channel. Try again when you’re online.',
+        'bad-url': 'That doesn’t look like a web address.'
+      }[res.reason] || 'Couldn’t check this link.';
+      return card('unknown', '–', 'Can’t tell from this link', shown, h('p', {}, msg));
+    }
+  }
+}
+
+async function ytLookup(url) {
+  const endpoints = ['https://www.youtube.com/oembed?format=json&url=', 'https://noembed.com/embed?url='];
+  for (const ep of endpoints) {
+    try {
+      const r = await fetch(ep + encodeURIComponent(url));
+      if (!r.ok) continue;
+      const j = await r.json();
+      if (j && !j.error && (j.author_name || j.author_url)) return j;
+    } catch (e) { /* try next */ }
+  }
+  return null;
+}
+
+async function runCheck(text) {
+  const out = $('#results');
+  if (!INDEX) await loadData();
+  if (!INDEX) return;
+  const results = Matcher.check(text, INDEX);
+  if (!results.length) {
+    out.replaceChildren(card('unknown', '–', 'No link found', null, h('p', {}, 'Paste or share something that contains a web address.')));
+    return;
+  }
+  out.replaceChildren(...results.map(render));
+  results.forEach((r, i) => {
+    if (r.verdict !== 'pending') { remember(r); return; }
+    ytLookup(r.finalUrl).then(info => {
+      const merged = info
+        ? Object.assign({}, r, Matcher.classifyChannel(info, INDEX))
+        : Object.assign({}, r, { verdict: 'unknown', reason: 'youtube-offline' });
+      out.children[i].replaceWith(render(merged));
+      remember(merged);
+    });
+  });
+}
+
+function remember(r) {
+  if (r.verdict === 'unknown' && r.reason === 'bad-url') return;
+  const hist = store.get('history', []);
+  hist.unshift({ t: Date.now(), host: r.channel || r.host, url: r.finalUrl || r.url, verdict: r.verdict });
+  store.set('history', hist.slice(0, 25));
+  renderHistory();
+}
+
+function renderHistory() {
+  const hist = store.get('history', []);
+  const ul = $('#history');
+  if (!hist.length) { ul.replaceChildren(h('li', { class: 'empty' }, 'Nothing checked yet.')); return; }
+  ul.replaceChildren(...hist.map(x => h('li', {},
+    h('span', {}, h('span', { class: `dot ${x.verdict}`, 'aria-hidden': 'true' }), x.host),
+    h('small', {}, new Date(x.t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })))));
+}
+
+function renderAbout(data) {
+  const entries = data.entries || [];
+  const counts = {};
+  for (const e of entries) counts[e.category] = (counts[e.category] || 0) + 1;
+  const sources = new Map();
+  for (const e of entries) if (e.source_url && !sources.has(e.source_url)) sources.set(e.source_url, e.attributed_by || e.source_url);
+
+  const list = h('ul', { class: 'list' });
+  const search = h('input', { type: 'search', placeholder: `Search ${entries.length} entries`, 'aria-label': 'Search the list' });
+  const draw = () => {
+    const q = search.value.trim().toLowerCase();
+    if (!q) { list.replaceChildren(h('li', { class: 'empty' }, 'Type a website or outlet name to search the list.')); return; }
+    const hits = entries.filter(e => !q || [e.domain, e.youtube, e.name, e.attributed_by].some(v => v && v.toLowerCase().includes(q)));
+    list.replaceChildren(...hits.slice(0, 60).map(e => h('li', {},
+      h('code', {}, e.domain || e.youtube), e.name ? ` — ${e.name}` : '',
+      h('small', {}, `${CATEGORY_LABEL[e.category] || e.category} · ${e.attributed_by || ''}`))));
+    if (hits.length > 60) list.append(h('li', { class: 'empty' }, `…and ${hits.length - 60} more. Narrow your search.`));
+  };
+  search.addEventListener('input', draw);
+  draw();
+
+  $('#about').replaceChildren(
+    h('p', { style: 'margin-top:0' }, `${entries.length} websites and channels, last updated ${data.updated}. Every entry is named in a published government report, sanctions decision or independent investigation.`),
+    h('div', { class: 'stats' }, ...Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([c, n]) =>
+      h('div', { class: 'stat' }, h('b', {}, n), h('span', {}, CATEGORY_LABEL[c] || c)))),
+    search, list,
+    h('details', { style: 'margin-top:12px' }, h('summary', {}, `Sources (${sources.size})`),
+      h('ul', { class: 'list' }, ...[...sources].map(([url, by]) => h('li', {}, h('a', { href: url, target: '_blank', rel: 'noopener' }, by), h('small', {}, url))))));
+}
+
+$('#check').addEventListener('click', () => runCheck($('#input').value));
+$('#input').addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) runCheck($('#input').value); });
+$('#paste').addEventListener('click', async () => {
+  try { const t = await navigator.clipboard.readText(); $('#input').value = t; runCheck(t); }
+  catch (e) { $('#input').focus(); }
+});
+
+// Content shared from another app arrives as ?title=&text=&url= (see manifest share_target).
+(function handleShare() {
+  const p = new URLSearchParams(location.search);
+  const shared = ['url', 'text', 'title'].map(k => p.get(k)).filter(Boolean).join(' ');
+  renderHistory();
+  loadData().then(() => {
+    if (shared) {
+      $('#input').value = shared;
+      runCheck(shared);
+      history.replaceState(null, '', location.pathname);
+    }
+  });
+})();
+
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+</script>
+</body>
+</html>

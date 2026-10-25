@@ -1,0 +1,946 @@
+[
+ {
+  "domain": "abakan-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "adygheya-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "altay-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "amur-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "arkhangelsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "astrakhan-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "baikal-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "barnaul-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "belgorod-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "berdyansk-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "news-pravda.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "cheb-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "chelyabinsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "cherkessk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "chukotka-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "crimea-news.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "dagestan-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "dnepr-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "dnr-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "donetsk-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "eco-pravda.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "feed-news.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "grozny-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "ingushetiya-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "irkutsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "izhevsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "kaliningrad-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "kalmykia-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "kaluga-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "kamchatka-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "karelia-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "kazan-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "kemerovo-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "khabarovsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "kharkov-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "kherson-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "krasnodar-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "krasnoyarsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "kurgan-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "kursk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "lipetsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "lnr-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "lvov-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "magadan-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "mariel-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "mariupol-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "melitopol-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "melitopolnews.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "moldova-news.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "msk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "nalchik-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "nao-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "news-balashiha.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "news-cr.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "news-donetsk.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "news-kharkov.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "news-kherson.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "news-kiev.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "news-lugansk.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "nikolaev-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "nmosknews.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "nn-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "novgorod-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "novosibirsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "omsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "orel-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "orenburg-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "penza-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "perm-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "piter-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "polarpravda.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "pravda-de.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "pravda-dk.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "pravda-en.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "pravda-es.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "pravda-fr.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "pravda-mk.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "pravda-voiny.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "pravda.cn.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "pskov-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "pytalovo-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "rostov-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "ryazan-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "samara-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "saransk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "saratov-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "sevastopol-news.com",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "smolensk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "sochi-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "tiraspol-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "tolyatti-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "tomsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "topnews.ck.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.cn.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.cv.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.in.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.kiev.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.kr.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.ks.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.lg.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.odessa.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.pl.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.rv.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.sebastopol.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.sumy.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.uz.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.vn.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.volyn.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.zp.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "topnews.zt.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "tula-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "tver-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "tyumen-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "uanews.co.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.crimea.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.donetsk.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.dp.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.if.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.kharkiv.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.km.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.kr.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.ks.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.lg.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.lviv.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.odessa.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.org.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.pl.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.sumy.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.te.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.uz.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.volyn.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.zp.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "uanews.zt.ua",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data",
+  "note": "Earlier \"topnews\"/\"uanews\" aggregator portals linked to the network (DFRLab calls them precursor sites)"
+ },
+ {
+  "domain": "udmurt-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "ufa-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "ugra-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "ulyanovsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "ural-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "veteranpravda.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "vin-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "vladikavkaz-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "vladimir-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "vladivostok-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "volgograd-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "vologda-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "voronezh-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "yakutsk-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "yamal-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "yaroslavl-news.net",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "zhitomir-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ },
+ {
+  "domain": "zp-news.ru",
+  "category": "pravda-network",
+  "attributed_by": "CheckFirst (Pravda network dataset)",
+  "source_url": "https://github.com/CheckFirstHQ/pravda-network-dissemination-data"
+ }
+]
